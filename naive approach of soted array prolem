@@ -1,0 +1,13 @@
+def exists_pair_naive(A, X):
+    N = len(A)
+    for i in range(N):
+        for j in range(i + 1, N):
+            if A[i] + A[j] == X:
+                return True
+    return False
+
+# Example usage
+A = [1, 2, 4, 5, 7, 11]
+X = 9
+result_naive = exists_pair_naive(A, X)
+print(result_naive)  
