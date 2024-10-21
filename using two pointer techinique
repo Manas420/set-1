@@ -1,0 +1,20 @@
+def exists_pair_two_pointers(A, X):
+    left = 0
+    right = len(A) - 1
+
+    while left < right:
+        current_sum = A[left] + A[right]
+        if current_sum == X:
+            return True
+        elif current_sum < X:
+            left += 1  # Move the left pointer to increase the sum
+        else:
+            right -= 1  # Move the right pointer to decrease the sum
+
+    return False
+
+# Example usage
+A = [1, 2, 4, 5, 7, 11]
+X = 9
+result_two_pointers = exists_pair_two_pointers(A, X)
+print(result_two_pointers)  # Output: True
